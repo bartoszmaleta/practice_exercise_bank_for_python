@@ -13,13 +13,13 @@ ignored = string.punctuation + " "
 
 def is_palindrome(str):
     cleanstr = ""
-    for i in str:
+    for letter in str:
         # cleanstr += "" if i in ignored else i ===============> Faster and cleaner
-        if i in ignored:
+        if letter in ignored:
             cleanstr += ''
         else:
-            cleanstr += i
-        # print(cleanstr)
+            cleanstr += letter
+        print(cleanstr)
     return cleanstr.lower() == cleanstr[::-1].lower()
 
 
